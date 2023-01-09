@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./App.module.scss";
 import jwt_decode from "jwt-decode";
-import {gapi} from 'gapi-script';
+import { gapi } from "gapi-script";
 interface resp {
   clientId: string;
   client_id: string;
@@ -48,9 +48,8 @@ function App() {
       theme: "outline",
       size: "large",
     });
-        //@ts-ignore
-    google.accounts.id.prompt()
-    // gapi.client.prompt()
+    //@ts-ignore
+    google.accounts.id.prompt();
   }, []);
   const handleSignOut = (event: React.MouseEvent<HTMLButtonElement>) => {
     setUser({});
@@ -60,13 +59,14 @@ function App() {
   return (
     <div className={style.App}>
       <div id="signInDiv"></div>
+
       {Object.entries(user).length != 0 && (
-        <button onClick={(e) => handleSignOut(e)}>Sign out</button>
-      )}
-      {user && (
         <div>
-          <img src={user.picture} />
-          <h3>{user.name}</h3>
+          <div>
+            <img src={user.picture} />
+            <h3>{user.name}</h3>
+          </div>
+          <button onClick={(e) => handleSignOut(e)}>Sign out</button>
         </div>
       )}
     </div>
