@@ -1,4 +1,4 @@
-# Google app login <img src="https://img.icons8.com/color/512/google-logo.png " width="34px" style="vertical-align:text-top"/>
+# Google app login <img src="https://img.icons8.com/color/512/google-logo.png" width="34px" style="vertical-align:text-top"/>
 [![React][react.js]][react-url]
 [![TS][ts]][ts-url]
 [![Google Identity][google]][google-url]
