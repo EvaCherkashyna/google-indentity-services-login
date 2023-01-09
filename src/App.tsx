@@ -61,12 +61,19 @@ function App() {
       <div id="signInDiv"></div>
 
       {Object.entries(user).length != 0 && (
-        <div>
+        <div className={style.cont}>
           <div>
             <img src={user.picture} />
             <h3>{user.name}</h3>
           </div>
-          <button onClick={(e) => handleSignOut(e)}>Sign out</button>
+          <button onClick={(e) => handleSignOut(e)} className={style.signOut}>
+            <img
+              className={style.img}
+              width="20px"
+              src="https://img.icons8.com/color/512/google-logo.png"
+              />
+          <span style={{marginRight:"10px"}}>Sign Out</span>
+          </button>
         </div>
       )}
     </div>
